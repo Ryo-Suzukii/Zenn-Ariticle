@@ -64,105 +64,26 @@ df = pd.DataFrame({
 })
 df
 ```
-<div>
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>city</th>
-      <th>food</th>
-      <th>price</th>
-      <th>quantity</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>osaka</td>
-      <td>apple</td>
-      <td>100</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>osaka</td>
-      <td>orange</td>
-      <td>200</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>osaka</td>
-      <td>banana</td>
-      <td>250</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>osaka</td>
-      <td>banana</td>
-      <td>300</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>tokyo</td>
-      <td>apple</td>
-      <td>150</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>tokyo</td>
-      <td>apple</td>
-      <td>200</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>tokyo</td>
-      <td>banana</td>
-      <td>400</td>
-      <td>7</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| | city | food | price | quantity |
+|---|------|------|-------|----------|
+| 0 | osaka | apple | 100 | 1 |
+| 1 | osaka | orange | 200 | 2 |
+| 2 | osaka | banana | 250 | 3 |
+| 3 | osaka | banana | 300 | 4 |
+| 4 | tokyo | apple | 150 | 5 |
+| 5 | tokyo | apple | 200 | 6 |
+| 6 | tokyo | banana | 400 | 7 |
 
 ```python
 object = df.groupby("グループ化したい列").関数
 df.groupby("city").mean()
 ```
-<div>
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>price</th>
-      <th>quantity</th>
-    </tr>
-    <tr>
-      <th>city</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>osaka</th>
-      <td>212.5</td>
-      <td>2.5</td>
-    </tr>
-    <tr>
-      <th>tokyo</th>
-      <td>250.0</td>
-      <td>6.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| city | price | quantity |
+|------|-------|----------|
+| osaka | 212.5 | 2.5 |
+| tokyo | 250.0 | 6.0 |
 
 #### indexの表示
 これでindex表示してくれる
